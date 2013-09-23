@@ -1,0 +1,24 @@
+<div class="row">
+    <h3 class="col-md-10">System Status</h3>
+</div>
+<div class="row">
+    <span class="col-md-2 stat-label">Start Time</span><span class="col-md-10" id="startTime">{{status.started}}</span>
+</div>
+<div class="row">
+    <h4 class="col-md-12">Abstract Batcher</h4>
+</div>
+
+{{metric-timer header="Add Invocation" data=abtractBatcher.add_invocation}}
+{{metric-counter header="Batch Add Invocation Count" data=abtractBatcher.batch_add_invocations}}
+{{metric-counter header="Counter Existed" data=abtractBatcher.counter_existed}}
+
+<div class="row">
+    <h4 class="col-md-12">Cassandra Submitter</h4>
+</div>
+{{metric-timer header="Submit Invocation" data=cassandraSubmitter.submit_invocation}}
+
+<div class="row">
+    <h4 class="col-md-12">Metering Filter</h4>
+</div>
+{{metric-timer header="Request" data=meteringFilter.requests}}
+{{metric-counter header="Active Request" data=meteringFilter.activeRequests}}
