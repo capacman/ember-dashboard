@@ -1,0 +1,30 @@
+<div class="panel panel-default">
+    <!-- Default panel contents -->
+    <div class="panel-heading">Users</div>
+
+    <!-- Table -->
+    <table class="table">
+        <thead>
+        <tr>
+            <th>#uuid</th>
+            <th>UserName</th>
+            <th>Application Name</th>
+            <th>User Count</th>
+        </tr>
+        </thead>
+        <tbody>
+        {{#each applications}}
+            <tr>
+                <td>{{uuid}}</td>
+                <td>{{username}}</td>
+                <td>{{appname}}</td>
+                <td>{{usercount}}</td>
+            </tr>
+        {{/each}}
+        </tbody>
+    </table>
+    <ul class="pager">
+        <li><a {{action previous}} {{bind-attr disabled=isFirstPage}}>Previous</a></li>
+        <li><a {{action next}} {{bind-attr disabled=isLastPage}}>Next</a></li>
+    </ul>
+</div>

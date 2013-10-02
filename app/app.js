@@ -1,5 +1,6 @@
 import Resolver from 'resolver';
 import router from 'appkit/router';
+import UserView from 'appkit/views/users';
 
 var App = Ember.Application.extend({
   LOG_ACTIVE_GENERATION: true,
@@ -8,7 +9,8 @@ var App = Ember.Application.extend({
   Resolver: Resolver,
   Router: Ember.Router.extend({
     router: router
-  })
+  }),
+  UserView:UserView
 });
 
 
